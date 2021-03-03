@@ -9,10 +9,10 @@ directories = range(1,11) # number of photos, second param should be number of p
 def receive_files():
   for dir in directories:
     os.mkdirs(os.path.join(path_root, dir))
-  for file in os.listdir(path_root):
-    move = re.match('\d+{file_atm}_', file)
-    if (move):
-      shutil.move(move, f'{path_root}/{dir}')
+    for file in os.listdir(path_root):
+      move = re.match('\d+{dir}_', file)
+      if (move):
+        shutil.move(move, f'{path_root}/{dir}')
 
 #run script
 receive_files()

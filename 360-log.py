@@ -8,7 +8,7 @@ path_root = "C:/user/name/Desktop/Kandao"
 directories = range(1,11)
 # number of photos, second param should be number of photos + 1. example: 10 photos
 #move all your photos to path_root. Files should not be inside any folder.
-regex = '0+{dir}_'
+regex = f'0+{dir}_'
 #matches the file depending on the folder number it is going to. begins with at least one zero, contains the current group of photos number.
 #example 0001_... photos
 
